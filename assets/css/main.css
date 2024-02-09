@@ -216,31 +216,6 @@ template {
     display: none
 }
 
-.animated-text span {
-  display: none;
-  line-height: 1;
-}
-
-.animated-text span.active {
-  display: inline;
-}
-
-.animated-text:after {
-  content: ".";
-  display: inline;
-  width: 6px;
-  text-indent: 0;
-  /* overflow: hidden; */
-  background: var(--col-icon);
-  animation: blink 0.3s infinite alternate;
-}
-.datawords{
-  white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -4907,6 +4882,40 @@ a img {
     .header .site-description {
         font-size: 40px
     }
+}
+.header .animated-text span {
+  display: none;
+  line-height: 1;
+}
+
+.header .animated-text span.active {
+  display: inline;
+}
+
+.header .animated-text:after {
+  content: ".";
+  display: inline;
+  width: 6px;
+  text-indent: 0;
+  /* overflow: hidden; */
+  background: var(--col-icon);
+  animation: blink 0.3s infinite alternate;
+}
+.header .datawords{
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .header-links {
