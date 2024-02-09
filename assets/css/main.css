@@ -4901,7 +4901,7 @@ a img {
   background: var(--col-icon);
   animation: blink 0.3s infinite alternate;
 }
-.header .datawords{
+.header .data-words{
   white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
