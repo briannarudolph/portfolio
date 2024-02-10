@@ -4883,7 +4883,7 @@ a img {
         font-size: 40px
     }
 }
-.header .typewriter{
+.header .typewriter span{
     position: relative;
 }
 .header .typewriter::after{
@@ -4895,6 +4895,12 @@ a img {
     width: 100%;
     animation: typing 3s steps(14) alternate infinite,
                 line 1s infinite;
+}
+.header .data-words{
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 @keyframes typing{
     to{
