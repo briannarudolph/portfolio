@@ -4883,41 +4883,29 @@ a img {
         font-size: 40px
     }
 }
-.header .animated-text span {
-  display: none;
-  line-height: 1;
+.header .typewriter{
+    position: relative;
 }
-
-.header .animated-text span.active {
-  display: inline;
+.header .typewriter::after{
+    content: '|';
+    position: absolute;
+    right: 0;
+    color: white;
+    background-color: #1d1f20;
+    width: 100%;
+    animation: typing 3s steps(14) alternate infinite,
+                line 1s infinite;
 }
-
-.header .animated-text:after {
-  content: ".";
-  display: inline;
-  width: 6px;
-  text-indent: 0;
-  /* overflow: hidden; */
-  background: var(--col-icon);
-  animation: blink 0.3s infinite alternate;
+@keyframes typing{
+    to{
+        width: 0%;
+    }
 }
-.header .data-words{
-  white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-@keyframes blink {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
+@keyframes line {
+    50%{
+        color: transparent;
+    }
+    
 .header-links {
     margin: 10px
 }
